@@ -1,0 +1,17 @@
+[data-theme='dark'] {
+    --background-color: #3c4750;
+    --primary: #7791ba;
+    --secondary: #c3c3c3;
+    --switch-background-color: var(--secondary);
+}
+
+:root:not([data-theme='dark']),
+[data-theme='light'] {
+    --primary: #7791ba;
+    --secondary: #c3c3c3;
+    --switch-background-color: var(--secondary);
+
+    @media only screen and (prefers-color-scheme: dark) :root:not([data-theme='light']) {
+        --background-color: #3c4750;
+    }
+}

@@ -1,0 +1,62 @@
+.toggler {
+    min-width: 8em;
+    right: calc(var(--spacing) / 2 + var(--scrollbar-width, 0px));
+    bottom: var(--spacing);
+    position: absolute;
+    grid-auto-flow: column;
+    grid-column-gap: 0;
+    display: grid;
+}
+
+.toggler > input {
+    margin-left: 0.5em;
+}
+
+.label-container {
+    margin-top: -0.25em;
+}
+
+.slide-in {
+    animation: slide-in 0.25s ease;
+    -webkit-animation: slide-in 0.25s ease;
+}
+
+.slide-out {
+    animation: slide-out 0.25s ease;
+    -webkit-animation: slide-out 0.25s ease;
+}
+@keyframes slide-in {
+    0% {
+        transform: translateX(10%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@-webkit-keyframes slide-in {
+    0% {
+        -webkit-transform: translateX(10%);
+    }
+    100% {
+        -webkit-transform: translateX(0%);
+    }
+}
+
+@keyframes slide-out {
+    0% {
+        transform: translateX(-10%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@-webkit-keyframes slide-out {
+    0% {
+        -webkit-transform: translateX(-10%);
+    }
+    100% {
+        -webkit-transform: translateX(0%);
+    }
+}

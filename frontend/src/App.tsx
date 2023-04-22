@@ -1,6 +1,7 @@
+import { ReactElement } from 'react';
 import { Home } from 'pages';
 
-const App = () => {
+const App = (): ReactElement => {
     return <Home />;
 };
 
