@@ -1,6 +1,6 @@
 import { ReactElement } from 'react';
 
-import paperLogo from 'assets/paper-logo-type.svg';
+import PaperLogo from 'assets/paper-logo-type.svg';
 
 import './index.css';
 
@@ -9,7 +9,7 @@ export const Home = (): ReactElement => {
         <>
             <div className="grid logo-container">
                 <img
-                    src={paperLogo}
+                    src={PaperLogo}
                     className="logo"
                     alt="paper dev studio logo"
                 />

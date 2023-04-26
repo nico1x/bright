@@ -1,21 +1,19 @@
 import React, { useContext, useEffect, useState } from 'react';
 
-import { THEME } from 'helpers/constants';
-
+import { ReactComponent as MoonIcon } from 'assets/moon.svg';
+import { ReactComponent as SunIcon } from 'assets/sun.svg';
 import {
     ThemeContextType,
     ThemeContextProviderProps,
 } from 'contexts/themeContext';
-
 import { ThemeContext } from 'contexts/themeContext';
+import { THEME } from 'helpers/constants';
 
 import './index.css';
 
 export const ThemeToggler: React.FC<ThemeContextProviderProps> = ({
     children,
 }) => {
-    const [slide, setSlide] = useState<'slide-in' | 'slide-out' | ''>('');
-
     const { darkMode, toggleDarkMode } = useContext(
         ThemeContext
     ) as ThemeContextType;
@@ -23,25 +21,26 @@ export const ThemeToggler: React.FC<ThemeContextProviderProps> = ({
     const handleToggle = (event: React.ChangeEvent<HTMLInputElement>) => {
         const checked: boolean = event.target.checked;
         toggleDarkMode(checked);
-        setSlide(checked ? 'slide-out' : 'slide-in');
         localStorage.setItem(THEME, checked ? 'dark' : 'light');
     };
 
     return (
         <>
             {children}
-            <label className="toggler" htmlFor="switch">
-                <div className={`label-container ${slide}`}>
-                    <small>{darkMode ? 'Dark Mode' : 'Light Mode'}</small>
+            <label className="toggle-wrapper" htmlFor="toggle">
+                <div className={`toggle ${darkMode ? 'enabled' : 'disabled'}`}>
+                    <div className="icons">
+                        <SunIcon />
+                        <MoonIcon />
+                    </div>
+                    <input
+                        id="toggle"
+                        name="toggle"
+                        type="checkbox"
+                        checked={darkMode}
+                        onChange={handleToggle}
+                    />
                 </div>
-                <input
-                    type="checkbox"
-                    id="switch"
-                    name="switch"
-                    role="switch"
-                    checked={darkMode}
-                    onChange={handleToggle}
-                />
             </label>
         </>
     );
