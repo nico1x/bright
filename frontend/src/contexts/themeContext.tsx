@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useState } from 'react';
+import { createContext, useEffect, useState } from 'react';
 
 import { THEME } from 'helpers/constants';
 
@@ -15,7 +15,7 @@ export const ThemeContext = createContext<ThemeContextType | null>(null);
 
 export const ThemeProvider: React.FC<ThemeContextProviderProps> = ({
     children,
-}) => {
+}: ThemeContextProviderProps) => {
     const [darkMode, setDarkMode] = useState<boolean>(false);
 
     useEffect(() => {

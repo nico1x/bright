@@ -1,19 +1,19 @@
-import React, { useContext, useEffect, useState } from 'react';
+import { useContext } from 'react';
 
 import { ReactComponent as MoonIcon } from 'assets/moon.svg';
 import { ReactComponent as SunIcon } from 'assets/sun.svg';
 import {
     ThemeContextType,
     ThemeContextProviderProps,
+    ThemeContext,
 } from 'contexts/themeContext';
-import { ThemeContext } from 'contexts/themeContext';
 import { THEME } from 'helpers/constants';
 
 import './index.css';
 
 export const ThemeToggler: React.FC<ThemeContextProviderProps> = ({
     children,
-}) => {
+}: ThemeContextProviderProps) => {
     const { darkMode, toggleDarkMode } = useContext(
         ThemeContext
     ) as ThemeContextType;
