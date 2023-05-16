@@ -1,0 +1,43 @@
+@media (min-width: 768px) {
+    article {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 600px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(0%, 1fr));
+    }
+
+    .forgotPasswordWrapper {
+        text-align: end;
+    }
+}
+
+label[for='remember'] {
+    width: fit-content;
+}
+
+h6 {
+    text-align: center;
+}
+
+.firebaseui-list-item > .firebaseui-idp-button {
+    border-radius: 50%;
+    width: 5em;
+    height: 5em;
+}
+
+.firebaseui-idp-button > .firebaseui-idp-text.firebaseui-idp-text-long,
+.firebaseui-idp-button > .firebaseui-idp-text.firebaseui-idp-text-short {
+    display: none;
+}
+
+.firebaseui-idp-button > .firebaseui-idp-icon-wrapper {
+    display: inline-block;
+}
+
+.firebaseui-idp-icon-wrapper > .firebaseui-idp-icon {
+    width: unset;
+    height: unset;
+}

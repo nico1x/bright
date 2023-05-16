@@ -7,7 +7,7 @@
 .toggle-wrapper {
     right: calc(var(--spacing) / 2 + var(--scrollbar-width, 0px));
     bottom: var(--spacing);
-    position: absolute;
+    position: fixed;
 }
 
 .toggle {

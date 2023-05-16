@@ -1,10 +1,8 @@
-import { ReactElement } from 'react';
-
 import PaperLogo from 'assets/paper-logo-type.svg';
 
 import './index.css';
 
-export const Home = (): ReactElement => {
+export const Landing = () => {
     return (
         <>
             <div className="grid logo-container">

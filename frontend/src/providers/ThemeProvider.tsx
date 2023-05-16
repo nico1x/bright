@@ -7,15 +7,13 @@ export type ThemeContextType = {
     toggleDarkMode: (darkMode: boolean) => void;
 };
 
-export type ThemeContextProviderProps = {
-    children: React.ReactNode;
+export type ThemeProviderProps = {
+    children?: React.ReactNode;
 };
 
 export const ThemeContext = createContext<ThemeContextType | null>(null);
 
-export const ThemeProvider: React.FC<ThemeContextProviderProps> = ({
-    children,
-}: ThemeContextProviderProps) => {
+export const ThemeProvider = ({ children }: ThemeProviderProps) => {
     const [darkMode, setDarkMode] = useState<boolean>(false);
 
     useEffect(() => {

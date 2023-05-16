@@ -15,3 +15,9 @@
         --background-color: #3c4750;
     }
 }
+
+.Toastify__close-button {
+    font-size: 0;
+    line-height: 0;
+    width: unset;
+}

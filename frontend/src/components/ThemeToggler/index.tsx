@@ -4,16 +4,14 @@ import { ReactComponent as MoonIcon } from 'assets/moon.svg';
 import { ReactComponent as SunIcon } from 'assets/sun.svg';
 import {
     ThemeContextType,
-    ThemeContextProviderProps,
+    ThemeProviderProps,
     ThemeContext,
-} from 'contexts/themeContext';
+} from 'providers/ThemeProvider';
 import { THEME } from 'helpers/constants';
 
 import './index.css';
 
-export const ThemeToggler: React.FC<ThemeContextProviderProps> = ({
-    children,
-}: ThemeContextProviderProps) => {
+export const ThemeToggler = ({ children }: ThemeProviderProps) => {
     const { darkMode, toggleDarkMode } = useContext(
         ThemeContext
     ) as ThemeContextType;
