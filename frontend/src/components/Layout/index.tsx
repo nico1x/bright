@@ -1,6 +1,8 @@
 import Navbar from 'components/Navbar';
 
-export type LayoutProps = {
+import './index.css';
+
+type LayoutProps = {
     children?: React.ReactNode;
 };
 
@@ -8,7 +10,7 @@ export default function Layout({ children }: LayoutProps) {
     return (
         <>
             <Navbar />
-            {children}
+            <main>{children}</main>
         </>
     );
 }
