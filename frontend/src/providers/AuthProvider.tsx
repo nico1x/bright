@@ -12,9 +12,8 @@ import {
 } from 'firebase/auth';
 
 import { auth } from 'helpers/firebase';
-import { FirebaseError } from 'firebase/app';
 
-export type AuthContextType = {
+type AuthContextType = {
     auth: Auth;
     currentUser: FirebaseUser | null;
     login: (email: string, password: string) => Promise<UserCredential>;
@@ -25,7 +24,7 @@ export type AuthContextType = {
     updatePassword: (password: string) => Promise<void>;
 };
 
-export type AuthProviderProps = {
+type AuthProviderProps = {
     children?: React.ReactNode;
 };
 
@@ -33,11 +32,6 @@ const AuthContext = createContext<AuthContextType>({} as AuthContextType);
 
 export const useAuth = (): AuthContextType => {
     return useContext(AuthContext);
-};
-
-export type FirebaseSignUpType = {
-    success: boolean;
-    error: FirebaseError | undefined;
 };
 
 export const AuthProvider = ({ children }: AuthProviderProps) => {

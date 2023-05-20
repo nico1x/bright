@@ -3,7 +3,7 @@ import * as ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router } from 'react-router-dom';
 import '@picocss/pico/css/pico.min.css';
 
-import { ThemeToggler } from 'components/ThemeToggler';
+import ThemeToggler from 'components/ThemeToggler';
 import { AuthProvider } from 'providers/AuthProvider';
 import { ThemeProvider } from 'providers/ThemeProvider';
 

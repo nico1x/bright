@@ -17,7 +17,7 @@ const uiConfig = {
     ],
 };
 
-export const LoginForm = () => {
+export default function LoginForm() {
     const { auth, login } = useAuth();
 
     const [loading, setLoading] = useState(false);
@@ -103,4 +103,4 @@ export const LoginForm = () => {
             <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={auth} />
         </article>
     );
-};
+}

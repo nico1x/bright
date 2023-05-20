@@ -11,7 +11,7 @@ import { THEME } from 'helpers/constants';
 
 import './index.css';
 
-export const ThemeToggler = ({ children }: ThemeProviderProps) => {
+export default function ThemeToggler({ children }: ThemeProviderProps) {
     const { darkMode, toggleDarkMode } = useContext(
         ThemeContext
     ) as ThemeContextType;
@@ -42,4 +42,4 @@ export const ThemeToggler = ({ children }: ThemeProviderProps) => {
             </label>
         </>
     );
-};
+}

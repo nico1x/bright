@@ -4,6 +4,8 @@ services:
   frontend:
     image: node:19.8.1-bullseye
     entrypoint: "/bin/entrypoint.sh" 
+    environment:
+      VITE_APP_TITLE: Bright
     ports:
       - 8000:8000
     working_dir: /src/app
